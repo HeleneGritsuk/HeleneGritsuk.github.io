@@ -6,6 +6,10 @@ body {
   color: #444444;
   overflow-x: hidden;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 h1 {
   font-family: "OpenSans Bold", sans-serif;
   font-size: 25px;
@@ -489,7 +493,7 @@ h2 {
   fill: #44c0aa;
 }
 .second-nav__item:hover {
-  transform: scaleY(1.1) translateY(-5px);
+  transform: translateY(-5px);
 }
 .second-nav__item {
   transition: 0.3s;
@@ -536,10 +540,19 @@ h2 {
     -ms-flex-positive: 1;
         flex-grow: 1;
   }
+  /*.second-nav__item:nth-child(1) {
+    background:#63d1bb url("../../img/bg-zigzag-fill.svg") center 90px repeat-x;
+
+  }
+  .second-nav__item:nth-child(2) {
+    background:#56c3b2 url("../../img/bg-zigzag-fill.svg") center 90px repeat-x;
+
+  }*/
 }
 .main-content {
   background: url("../img/hero-mobile@1x.jpg") center -17px no-repeat;
   border-top: 1px solid #ececec;
+  position: relative;
 }
 .main-content__wrapper {
   width: 260px;
@@ -579,6 +592,16 @@ h2 {
 @media (min-width: 768px) {
   .main-content {
     background: url("../img/hero-desktop.jpg") center top no-repeat;
+  }
+  .main-content::after {
+    content: "";
+    height: 34px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    z-index: 100;
+    background: url(../img/bg-zigzag-fill.svg) 50% 13px repeat-x;
   }
   .main-content__title {
     margin-top: 150px;
@@ -2208,11 +2231,6 @@ input[type="email"]:hover {
     margin-top: 37px;
     font-size: 20px;
     line-height: 24px;
-  }
-  .production-process__icon-video {
-    /* margin-right: 20px;
-    margin-top: 37px;
-    margin-bottom: auto;*/
   }
   .production-process__order {
     width: 100%;
