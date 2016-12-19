@@ -148,12 +148,13 @@
     </section>
     <section class="best-product">
       <div class="best-product__wrapper">
-        <h2 class="best-product__title">Вязаные корзинки</h2>
-        <h3 class="best-product__subtitle">Товар недели</h3>
+        <div class="best-product__title-wrapper">
+          <h2 class="best-product__title">Вязаные корзинки</h2>
+          <h3 class="best-product__subtitle">Товар недели</h3>
+        </div>
         <div class="best-product__description">
           <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="best-product__table">
-
             <tr>
               <td class="best-product__field">Цвет:</td>
               <td class="best-product__value">«Тиффани»/серый</td>
@@ -167,11 +168,11 @@
               <td class="best-product__value">15 см</td>
             </tr>
           </table>
+          <div class="best-product__photo">
+            <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+          </div>
           <span class="best-product__price">Цена: 990руб.</span>
           <a class="best-product__order btn" href="#">Заказать</a>
-        </div>
-        <div class="best-product__photo">
-          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
         </div>
       </div>
     </section>
@@ -203,7 +204,7 @@
             <cite class="reviews__author-nick">@misssssiskras</cite>
           </blockquote>
           <div class="reviews__controls">
-            <a class="reviews__prev" href="#"><svg class="reviews__left-img" width="50px" height="26.003px"><use xlink:href="#left"/></svg></a>
+            <a class="reviews__prev" href="#"><span class="visually-hidden">Предыдущий отзыв</span><svg class="reviews__left-img" width="50px" height="26.003px"><use xlink:href="#left"/></svg></a>
             <a class="reviews__next" href="#"><span class="visually-hidden">Следующий отзыв</span><svg class="reviews__right-img" width="50px" height="26.003px"><use xlink:href="#right"/></svg></a>
           </div>
         </div>
@@ -212,7 +213,11 @@
     </section>
     <section class="contacts">
       <div class="contacts__wrapper">
-        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__map"></div>
+        <div class="contacts__title__wrapper">
+          <h2 class="contacts__title">Контакты</h2>
+          <svg class="contacts__icon-flag" width="46.68px" height="81.691px"><use xlink:href="#flag"/></svg>
+        </div>
         <table class="contacts__table">
           <tr>
             <td class="contacts__field">e-mail:</td>
@@ -220,13 +225,11 @@
           </tr>
           <tr>
             <td class="contacts__field">адрес:</td>
-            <td class="contacts__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+            <td class="contacts__value">г. Санкт-Петербург, <br>ул. Большая Конюшенная,<br> д. 19/8, офис 101</td>
           </tr>
         </table>
-        <svg class="contacts__icon-flag" width="46.68px" height="81.691px"><use xlink:href="#flag"/></svg>
         <a class="contacts__write btn" href="#">Напишите нам</a>
       </div>
-      <div class="map"></div>
     </section>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
