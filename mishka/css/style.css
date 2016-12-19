@@ -6,10 +6,6 @@ body {
   color: #444444;
   overflow-x: hidden;
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
 h1 {
   font-family: "OpenSans Bold", sans-serif;
   font-size: 25px;
@@ -272,6 +268,9 @@ h2 {
   padding: 0;
   margin: 0;
 }
+.main-nav {
+  z-index: 100;
+}
 .main-nav__item a {
   display: block;
   padding: 15px;
@@ -304,9 +303,6 @@ h2 {
     padding-bottom: 27px;
     text-align: left;
   }
-  .main-nav {
-    width: 100%;
-  }
   .main-nav--closed {
     display: none;
   }
@@ -331,17 +327,10 @@ h2 {
     font-size: 15px;
     line-height: 24px;
   }
-  .main-nav-desktop {
-    display: none;
-  }
   .user-block__search {
     display: none;
   }
   .main-nav__list {
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .main-nav-desktop__list {
     display: -ms-flexbox;
     display: flex;
   }
@@ -398,20 +387,6 @@ h2 {
     padding-top: 27px;
     padding-bottom: 33px;
   }
-  .main-nav-desktop {
-    display: block;
-    width: 330px;
-  }
-  .main-nav-desktop__item a {
-    font-size: 15px;
-  }
-  .main-nav-desktop__item:nth-child(1) a {
-    padding-left: 0;
-    padding-right: 30px;
-  }
-  .main-nav-desktop__item:nth-child(2) a {
-    padding-left: 30px;
-  }
 }
 .main-nav-desktop__item a {
   display: block;
@@ -430,10 +405,20 @@ h2 {
 .main-nav-desktop__item a:active {
   color: rgba(0, 0, 0, 0.3);
 }
+@media (min-width: 768px) {
+  .main-nav-desktop {
+    display: none;
+  }
+  .main-nav-desktop__list {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 @media (min-width: 1150px) {
   .main-nav-desktop {
     display: block;
     width: 330px;
+    z-index: 100;
   }
   .main-nav-desktop__item a {
     font-size: 15px;
@@ -600,7 +585,6 @@ h2 {
     display: block;
     position: absolute;
     bottom: -1px;
-    z-index: 100;
     background: url(../img/bg-zigzag-fill.svg) 50% 13px repeat-x;
   }
   .main-content__title {
@@ -1507,6 +1491,9 @@ input[type="email"]:hover {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.user-block {
+  z-index: 100;
 }
 .user-block__item a {
   display: block;
