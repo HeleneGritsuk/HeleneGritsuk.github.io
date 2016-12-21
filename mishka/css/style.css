@@ -855,7 +855,7 @@ h2 {
   fill: #44c0aa;
 }
 .second-nav__item:hover {
-  transform: scaleX(1.1) translateY(-5px);
+  transform: scaleY(1.1) translateY(-5px);
 }
 .second-nav__item {
   transition: 0.3s;
