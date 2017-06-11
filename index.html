@@ -2,106 +2,354 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content=" FILL ME IN ">
-    <meta name="author" content=" FILL ME IN ">
-    <title>Cameron Pittman: Portfolio</title>
-    <link href="css/print.min.css" rel="stylesheet" media="print">
-    <style>
-      @font-face {
-        font-family:"Open Sans";
-        src: url("fonts/OpenSans-Regular.ttf");
-      }
-      @font-face {
-        font-family:"Open Sans Bold";
-        src: url("fonts/OpenSans-Bold.ttf");
-      }
-      html {
-        font-size: 100%;
-        overflow-y: scroll;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: none;
-      }
-      body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; }
-      body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #333; }
-      a { color: #12C; }
-      a:visited { color: #61C; }
-      a:focus { outline: thin dotted; }
-      a:hover, a:active { color: #c00; outline: 0; }
-      b, strong { font-weight: bold; }
-      pre, code { font-family: monospace, monospace; font-size: 1em; }
-      ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
-      img { border: 0; max-width: 100%; }
-      body { background: #fff; }
-      header, footer, .container { max-width: 45em; margin: 0 auto; }
-      header { padding: 0 0.5em; color: #C90B0B; }
-      header img { border-radius: 40px; float: left; }
-      header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
-      header p span { font-size: 0.8em; font-weight: normal;}
-      .hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
-        border-bottom: 1px solid #ccc;
-        border-top: 1px solid #ccc;
-      }
-      .content { padding: 1em 1em; }
-      .content li { list-style-type: none; font-size: 1.1em;}
-      li img { float:left; padding-right: 1em; }
-      li p { font-size: 0.9em; font-style: italic; }
-      footer {
-        padding: 0 0.5em;
-        border-top: 1px solid #ccc;
-      }
-      footer span { float: right; font-style: italic; }
-      @media only screen and (max-width: 480px) {
-        body { font-size: 12px;}
-        header p { padding-left: 4.5em;}
-      }
-    </style>
+    <title>Made for Designers</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <a href="/"><img src="img/profilepic.jpg"></a>
-      <p>Cameron Pittman<br><span>Course Developer</span></p>
-    </header>
-    <div class="container">
-      <div class="hero">
-        <strong>I love web development!</strong> This is a template for a simple portfolio. I decided to use it to showcase a few Udacity courses I've taken and some teaching work, but you can use it to showcase any kind of project that you want the world to see :) <br> Contact me: me@email.com
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-responsive" alt="REEN" ></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#" class="text-uppercase">Home</a></li>
+            <li><a href="#" class="text-uppercase">Portfolio</a></li>
+            <li><a href="#" class="text-uppercase">Blog</a></li>
+            <li><a href="#" class="text-uppercase">Pages</a></li>
+            <li><a href="#" class="text-uppercase">Features</a></li>
+            <li><a href="#" class="text-uppercase">Mega Menu</a></li>
+            <li><a href="#" class="text-uppercase">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href=""><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="content">
-        <ul>
-          <li>
-            <img src="https://lh4.ggpht.com/kJEnfqhPvtm4m3EneSZ4fWYGS8lW4YNhEjk6zPkyrQaBUHc-2Y_ElDic99NHI0h-UBLXVbRCjFybFvrWxdk=s100">
-            <a href="project-2048.html">Build Your Own 2048!</a>
-            <p>I made my own version of 2048. How cool is that!?</p>
-          </li>
-          <li>
-            <img src="https://lh6.ggpht.com/f_0W8h__3G99CWTjnMjD8BUKm7yp2-wJyApLtTwFoFtlal2ULf_JgHIsOQq2NiYfKOdMlXlMHDKNo5XVZLs=s100">
-            <a href="project-webperf.html">Website Performance Optimization</a>
-            <p>Hey... this class looks familiar.</p>
-          </li>
-          <li>
-            <img src="https://lh5.ggpht.com/IKdCmTWn8a2nMhlwMYzryvzRN5CUZAOBr4tDrEAbszV7TIFe9pRAInA4kkYcgTXwrifJsBEsq1agTueuu-g=s100">
-            <a href="project-mobile.html">Mobile Web Development</a>
-            <p>Making mobile apps isn't so hard after all.</p>
-          </li>
-          <li>
-            <img src="views/images/pizzeria.jpg" width="100">
-            <a href="views/pizza.html">Cam's Pizzeria</a>
-            <p>Who wants a performant pizza?</p>
-          </li>
-        </ul>
+    </nav>
+    <section class="slider">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="carousel-example-generic" class="carousel slide simple-carousel" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="img/slide1.jpg" alt="">
+                  <div class="carousel-caption">
+                      <div class="row">
+                        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                          <h2 class="text-uppercase">Made for Designers</h2>
+                          <p>Create your online portfolio in minutes with the professionally and lovingly designed REEN website template. Customize your site with versatile and easy to use features.</p>
+                          <a class="btn btn-primary btn-lg text-uppercase" href="#" role="button">Get started now</a>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/slide2.jpg" alt="">
+                  <div class="carousel-caption">
+                    <div class="row">
+                      <div class="col-md-9 col-md-offset-3 col-sm-9 col-sm-offset-3 col-xs-8 col-xs-offset-4 text-right">
+                        <h2 class="text-uppercase">Fresh and beautiful design</h2>
+                        <p>REEN is designed to showcase your talent and put your work in the forefront.<br>Professionally use of typography and layout that fits your content.</p>
+                        <a class="btn btn-primary btn-lg text-uppercase" href="#" role="button">Get started now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/slide3.jpg" alt="">
+                  <div class="carousel-caption">
+                    <div class="row">
+                      <div class="col-md-8 col-sm-8 text-left">
+                        <h2 class="text-uppercase"><span>Clean and</span><br><span>reusable code</span></h2>
+                        <p>The clean code allows you to easily copy code blocks from content modules and past them in different places or layouts.</p>
+                        <a class="btn btn-primary btn-lg text-uppercase" href="#" role="button">Get started now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/slide4.jpg" alt="">
+                  <div class="carousel-caption">
+                    <div class="row">
+                      <div class="col-md-8 col-md-offset-4 col-sm-8 col-sm-offset-4 text-right">
+                        <h2 class="text-uppercase"><span>Just focus on</span><br><span>your creativity</span></h2>
+                        <p>Take a break from messing around with heavy coding and spend your time brainstorming ideas for your next project.</p>
+                        <a class="btn btn-primary btn-lg text-uppercase" href="#" role="button">Get started now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/slide5.jpg" alt="">
+                  <div class="carousel-caption">
+                    <div class="row">
+                      <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 text-center">
+                        <h2 class="text-uppercase">Showcase<br>your content</h2>
+                        <p>With REEN you have the possibility to create websites for various contents quickly and easily. Now it's up to you!</p>
+                        <a class="btn btn-primary btn-lg text-uppercase" href="#" role="button">Get started now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+          </div>
+        </div>
       </div>
-      <footer>
-        <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
-      </footer>
+    </section>
+    <div class="features">
+      <div class="container">
+        <div class="row features__info">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h3>Beautiful. Clean. Responsive.</h3>
+            <p>REEN is a high-quality solution for those who want a beautiful website in no time. It's fully responsive and will adapt itself to any mobile device. iPad, iPhone, Android, it doesn't matter. Your content will always looks its absolute best.</p>
+          </div>
+        </div>
+        <div class="row features__list">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-3 col-sm-2 clearfix"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></div>
+              <div class="col-md-9 col-sm-10">
+                <h4>Passion</h4>
+                <p>Magnis modipsae que lib voloratati andigen daepeditem quiate re porem aut labor. Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-3 col-sm-2 clearfix"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
+              <div class="col-md-9 col-sm-10">
+                <h4>Creativity</h4>
+                <p>Magnis modipsae que lib voloratati andigen daepeditem quiate re porem aut labor. Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-3 col-sm-2 clearfix"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></div>
+              <div class="col-md-9 col-sm-10">
+                <h4>Quality</h4>
+                <p>Magnis modipsae que lib voloratati andigen daepeditem quiate re porem aut labor. Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  <script>
-    (function(w,g){w['GoogleAnalyticsObject']=g;
-    w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
-    ga('create', 'UA-XXXX-Y');
-    ga('send', 'pageview');
-  </script>
-  <script async src="http://www.google-analytics.com/analytics.js"></script>
-  <script async src="js/perfmatters.js"></script>
+    <section class="latest-works">
+      <div class="container">
+        <div class="row latest-works__info">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h3>Check out our latest works</h3>
+            <p>Magnis modipsae que voloratati andigen daepeditem quiate re porem aut labor.</p>
+          </div>
+        </div>
+        <div class="row latest-works__examples">
+          <div class="col-sm-6 col-md-6">
+            <div class="thumbnail">
+              <a href="#">
+                <img src="img/motel.jpg" alt="motel">
+              </a>
+              <div class="caption text-center">
+                <h5><a href="#">Grand Motel gets an identity brushup</a></h5>
+                <p>Identity</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6">
+            <div class="thumbnail">
+              <a href="">
+                <img src="img/fresh-branding.jpg" alt="fresh-branding">
+              </a>
+              <div class="caption text-center">
+                <h5><a href="">Fresh branding for a creative startup</a></h5>
+                <p>Identity</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row latest-works__carousel">
+          <div id="multi-carousel" class="carousel slide multi-item-carousel" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#multi-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#multi-carousel" data-slide-to="1"></li>
+                <li data-target="#multi-carousel" data-slide-to="2"></li>
+                <li data-target="#multi-carousel" data-slide-to="3"></li>
+                <li data-target="#multi-carousel" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <div class="col-md-3 col-xs-3">
+                    <a href="#"><img src="img/sm-image1.jpg" class="img-responsive"></a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="col-md-3 col-xs-3">
+                    <a href="#"><img src="img/sm-image2.jpg" class="img-responsive"></a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="col-md-3 col-xs-3">
+                    <a href="#"><img src="img/sm-image3.jpg" class="img-responsive"></a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="col-md-3 col-xs-3">
+                    <a href="#"><img src="img/sm-image4.jpg" class="img-responsive"></a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="col-md-3 col-xs-3">
+                    <a href="#"><img src="img/sm-image5.jpg" class="img-responsive"></a>
+                  </div>
+                </div>
+              </div>
+              <a class="left carousel-control" href="#multi-carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#multi-carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="partnership">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h3>Want to work with us?</h3>
+            <p>Magnis modipsae que voloratati andigen daepeditem quiate re porem aut labor. Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam</p>
+            <button class="btn btn-primary text-uppercase" type="button" data-toggle="modal" data-target="#myModal">Get in touch</button>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="ModalLabel">Contact Us</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="recipient-name" class="control-label">Name:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="email-text" class="control-label">Email:</label>
+                            <input type="email" class="form-control" id="email-text">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="message-text" class="control-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__top">
+          <div class="col-lg-3 col-lg-offset-0 col-md-8 col-md-offset-0 col-sm-7 col-sm-offset-0 col-xs-8 col-xs-offset-2  footer__about-info">
+            <h6 class="text-uppercase">Who we are</h6>
+            <a class="footer__logo" href="#">
+            </a>
+            <p>Magnis modipsae voloratati andigen daepeditem quiate re porem que aut labor. Laceaque eictemperum quiae sitiorem rest non restibusaes maio es dem tumquam.</p>
+            <a href="#" class="footer__more-link">More about us<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+          </div>
+          <div class="col-lg-3 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-8 col-xs-offset-2 footer__latest-works">
+            <h6 class="text-uppercase">Latest works</h6>
+            <a href=""><img src="img/footer-image1.jpg" alt="grand_motel"></a>
+            <a href=""><img src="img/footer-image2.jpg" alt="PC"></a>
+            <a href=""><img src="img/footer-image3.jpg" alt="vinyl_record"></a>
+            <a href=""><img src="img/footer-image4.jpg" alt="smartphone"></a>
+          </div>
+          <div class="col-lg-3 col-lg-offset-0 col-md-8 col-md-offset-0 col-sm-7 col-sm-offset-0 col-xs-8 col-xs-offset-2 footer__address" >
+            <h6 class="text-uppercase">Get in touch</h6>
+            <p>Doloreiur quia commolu ptatemp dolupta oreprerum tibusam eumenis et consent accullignis dentibea autem inisita.</p>
+            <address>
+              <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>84 Street, City, State 24813<br>
+              <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>+00 (123) 456 78 90<br>
+              <a href="mailto:#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>info@reen.com</a><br>
+            </address>
+          </div>
+          <div class="col-lg-3 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-8 col-xs-offset-2 footer__subscribe">
+            <h6 class="text-uppercase">Free updates</h6>
+            <p>Conecus iure posae volor remped modis aut lor volor accabora incim resto explabo.</p>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Enter your email address">
+              <span class="input-group-btn">
+                <button class="btn btn-primary btn-sm text-uppercase" type="button">Subscribe</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3">&copy; 2014 REEN. All rights reserved.</div>
+            <div class="col-lg-4 col-lg-offset-5 col-md-5 col-md-offset-4">
+              <ul class="list-inline">
+                <li><a href="">Home</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mulptiple-carousel.js"></script>
   </body>
 </html>
