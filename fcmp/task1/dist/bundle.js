@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b15f65a0d3fb963b3be8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ec9c498f6ba57302e3e1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,23 +722,30 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(1)(__webpack_require__.s = 1);
+/******/ 	return hotCreateRequire(0)(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(1);
+
+
+/***/ }),
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_pagination__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_constants__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_prepareChannel__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_prepareNewsItem__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_prepareNewsHeader__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_httpClient__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_prepareChannel__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_prepareNewsItem__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_prepareNewsHeader__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_httpClient__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_actions__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_renderer__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_actions__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_constants__ = __webpack_require__(10);
 
 
 
@@ -749,21 +756,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 const newsPagination = new __WEBPACK_IMPORTED_MODULE_0__app_pagination__["a" /* default */]();
-const httpClient = new __WEBPACK_IMPORTED_MODULE_5__app_httpClient__["a" /* default */](__WEBPACK_IMPORTED_MODULE_1__app_constants__["h" /* proxyurl */] + __WEBPACK_IMPORTED_MODULE_1__app_constants__["b" /* apiUrl */], __WEBPACK_IMPORTED_MODULE_1__app_constants__["a" /* apiKey */]);
-const channelRenderer = new __WEBPACK_IMPORTED_MODULE_6__app_renderer__["a" /* default */](__WEBPACK_IMPORTED_MODULE_1__app_constants__["c" /* channelTmpl */], __WEBPACK_IMPORTED_MODULE_1__app_constants__["e" /* channelsContainer */], __WEBPACK_IMPORTED_MODULE_2__app_prepareChannel__["a" /* default */]);
-const newsRenderer = new __WEBPACK_IMPORTED_MODULE_6__app_renderer__["a" /* default */](__WEBPACK_IMPORTED_MODULE_1__app_constants__["i" /* tmpl */], __WEBPACK_IMPORTED_MODULE_1__app_constants__["g" /* newsContainer */], __WEBPACK_IMPORTED_MODULE_3__app_prepareNewsItem__["a" /* default */]);
-const headerRenderer = new __WEBPACK_IMPORTED_MODULE_6__app_renderer__["a" /* default */](__WEBPACK_IMPORTED_MODULE_1__app_constants__["f" /* headerTmpl */], __WEBPACK_IMPORTED_MODULE_1__app_constants__["g" /* newsContainer */], __WEBPACK_IMPORTED_MODULE_4__app_prepareNewsHeader__["a" /* default */]);
+const httpClient = new __WEBPACK_IMPORTED_MODULE_4__app_httpClient__["a" /* default */](__WEBPACK_IMPORTED_MODULE_7__app_constants__["h" /* proxyurl */] + __WEBPACK_IMPORTED_MODULE_7__app_constants__["b" /* apiUrl */], __WEBPACK_IMPORTED_MODULE_7__app_constants__["a" /* apiKey */]);
+const channelRenderer = new __WEBPACK_IMPORTED_MODULE_6__app_renderer__["c" /* Renderer */](__WEBPACK_IMPORTED_MODULE_7__app_constants__["c" /* channelTmpl */], __WEBPACK_IMPORTED_MODULE_7__app_constants__["e" /* channelsContainer */], __WEBPACK_IMPORTED_MODULE_1__app_prepareChannel__["a" /* default */]);
+const newsRenderer = new __WEBPACK_IMPORTED_MODULE_6__app_renderer__["b" /* NewsRenderer */](__WEBPACK_IMPORTED_MODULE_7__app_constants__["i" /* tmpl */], __WEBPACK_IMPORTED_MODULE_7__app_constants__["g" /* newsContainer */], __WEBPACK_IMPORTED_MODULE_2__app_prepareNewsItem__["a" /* default */]);
+const headerRenderer = new __WEBPACK_IMPORTED_MODULE_6__app_renderer__["a" /* HeaderRenderer */](__WEBPACK_IMPORTED_MODULE_7__app_constants__["f" /* headerTmpl */], __WEBPACK_IMPORTED_MODULE_7__app_constants__["g" /* newsContainer */], __WEBPACK_IMPORTED_MODULE_3__app_prepareNewsHeader__["a" /* default */], newsPagination);
 const seeMoreBtn = document.querySelector('.btn-more');
 const sources = document.querySelector('.sources');
 
 const appendNews = (data) => {
   const { articles } = data;
   const [{ source: { name: sourceName } }] = articles;
-  if (newsPagination.pageNumber === 1) {
-    headerRenderer.render([sourceName]);
-  }
+  headerRenderer.render([sourceName]);
   newsRenderer.render(articles);
-  seeMoreBtn.setAttribute('style', 'display:block');
 };
 
 const handleClick = (e) => {
@@ -780,16 +784,9 @@ const handleClick = (e) => {
 };
 
 
-channelRenderer.render(__WEBPACK_IMPORTED_MODULE_1__app_constants__["d" /* channels */]);
-const actions = new __WEBPACK_IMPORTED_MODULE_7__app_actions__["a" /* default */]();
+channelRenderer.render(__WEBPACK_IMPORTED_MODULE_7__app_constants__["d" /* channels */]);
+const actions = new __WEBPACK_IMPORTED_MODULE_5__app_actions__["a" /* default */]();
 actions.bindHandlers([sources, seeMoreBtn], handleClick);
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(0);
 
 
 /***/ }),
@@ -825,6 +822,162 @@ class Pagination {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+const prepareChannelItem = (tmpl, channelData) => {
+  const channelBtnGet = tmpl.content.querySelector('.btn-get');
+  const channelImg = tmpl.content.querySelector('img');
+  const channelTitle = tmpl.content.querySelector('h2');
+  const { id, name, imgUrl } = channelData;
+
+  channelBtnGet.setAttribute('id', id);
+  channelImg.setAttribute('src', imgUrl);
+  channelTitle.textContent = name;
+  return document.importNode(tmpl.content, true);
+};
+/* harmony default export */ __webpack_exports__["a"] = (prepareChannelItem);
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(5);
+
+
+const prepareNewsItem = (tmpl, newsData) => {
+  const newsImg = tmpl.content.querySelector('.news-item__img');
+  const newsTitle = tmpl.content.querySelector('.news-item__title');
+  const newsDate = tmpl.content.querySelector('.news-item__date');
+
+  const {
+    publishedAt: date,
+    title,
+    url,
+    urlToImage: urlImg,
+  } = newsData;
+
+  newsTitle.textContent = title;
+  newsDate.textContent = Object(__WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */])(date);
+  newsImg.setAttribute('style', `background-image: url(${(urlImg || './img/default.jpeg')})`);
+  newsTitle.setAttribute('href', url);
+  return document.importNode(tmpl.content, true);
+};
+/* harmony default export */ __webpack_exports__["a"] = (prepareNewsItem);
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const formatDate = (date) => {
+  const dateOptions = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+
+  };
+
+  return new Date(date).toLocaleString('en', dateOptions);
+};
+/* harmony default export */ __webpack_exports__["a"] = (formatDate);
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const prepareNewsHeader = (tmpl, channelName) => {
+  const newsHeader = tmpl.content.querySelector('.news-header');
+  const container = document.querySelector('.articles__content');
+  container.innerHTML = '';
+  newsHeader.textContent = `${channelName} news`;
+  return document.importNode(tmpl.content, true);
+};
+/* harmony default export */ __webpack_exports__["a"] = (prepareNewsHeader);
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+class HttpClient {
+  constructor(apiUrl, apiKey) {
+    this.apiUrl = apiUrl;
+    this.apiKey = `apiKey=${apiKey}`;
+  }
+
+  get(params) {
+    return fetch(`${this.apiUrl}${this.apiKey}${params}`);
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = HttpClient;
+
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+class Actions {
+  bindHandlers(target, handler) {
+    target.forEach((elem) => { elem.addEventListener('click', handler); });
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Actions;
+
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Renderer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NewsRenderer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderRenderer; });
+class Renderer {
+  constructor(tmpl, container, prepareContent) {
+    this.tmpl = tmpl;
+    this.container = container;
+    this.prepareContent = prepareContent;
+  }
+
+  render(data) {
+    const elementsArray = data.map(elem => this.prepareContent(this.tmpl, elem));
+    elementsArray.forEach((elem) => { this.container.appendChild(elem); });
+  }
+}
+
+class NewsRenderer extends Renderer {
+  render(data) {
+    super.render(data);
+    const seeMoreBtn = document.querySelector('.btn-more');
+    seeMoreBtn.setAttribute('style', 'display:block');
+  }
+}
+
+class HeaderRenderer extends Renderer {
+  constructor(tmpl, container, prepareContent, pagination) {
+    super(tmpl, container, prepareContent);
+    this.pagination = pagination;
+  }
+  render(data) {
+    this.pagination.pageNumber == 1 ? super.render(data) : '';
+  }
+}
+
+
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return headerTmpl; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return tmpl; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return channelTmpl; });
@@ -851,144 +1004,6 @@ const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 const apiUrl = 'https://newsapi.org/v2/everything?';
 const apiKey = 'e79543cdac79424d903e67af4125a6d4';
 
-
-
-
-/***/ }),
-/* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const prepareChannelItem = (tmpl, channelData) => {
-  const channelBtnGet = tmpl.content.querySelector('.btn-get');
-  const channelImg = tmpl.content.querySelector('img');
-  const channelTitle = tmpl.content.querySelector('h2');
-  const { id, name, imgUrl } = channelData;
-
-  channelBtnGet.setAttribute('id', id);
-  channelImg.setAttribute('src', imgUrl);
-  channelTitle.textContent = name;
-  return document.importNode(tmpl.content, true);
-};
-/* harmony default export */ __webpack_exports__["a"] = (prepareChannelItem);
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(6);
-
-
-const prepareNewsItem = (tmpl, newsData) => {
-  const newsImg = tmpl.content.querySelector('.news-item__img');
-  const newsTitle = tmpl.content.querySelector('.news-item__title');
-  const newsDate = tmpl.content.querySelector('.news-item__date');
-
-  const {
-    publishedAt: date,
-    title,
-    url,
-    urlToImage: urlImg,
-  } = newsData;
-
-  newsTitle.textContent = title;
-  newsDate.textContent = Object(__WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */])(date);
-  newsImg.setAttribute('style', `background-image: url(${(urlImg || './img/default.jpeg')})`);
-  newsTitle.setAttribute('href', url);
-  return document.importNode(tmpl.content, true);
-};
-/* harmony default export */ __webpack_exports__["a"] = (prepareNewsItem);
-
-
-/***/ }),
-/* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const formatDate = (date) => {
-  const dateOptions = {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-
-  };
-
-  return new Date(date).toLocaleString('en', dateOptions);
-};
-/* harmony default export */ __webpack_exports__["a"] = (formatDate);
-
-
-/***/ }),
-/* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const prepareNewsHeader = (tmpl, channelName) => {
-  const newsHeader = tmpl.content.querySelector('.news-header');
-  const container = document.querySelector('.articles__content');
-  container.innerHTML = '';
-  newsHeader.textContent = `${channelName} news`;
-  return document.importNode(tmpl.content, true);
-};
-/* harmony default export */ __webpack_exports__["a"] = (prepareNewsHeader);
-
-
-/***/ }),
-/* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index__ = __webpack_require__(0);
-
-
-class HttpClient {
-  constructor(apiUrl, apiKey) {
-    this.apiUrl = apiUrl;
-    this.apiKey = `apiKey=${apiKey}`;
-  }
-
-  get(params) {
-    return fetch(`${this.apiUrl}${this.apiKey}${params}`);
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = HttpClient;
-
-
-
-/***/ }),
-/* 9 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-class Renderer {
-  constructor(tmpl, container, prepareContent) {
-    this.tmpl = tmpl;
-    this.container = container;
-    this.prepareContent = prepareContent;
-  }
-
-  render(data) {
-    const elementsArray = data.map(elem => this.prepareContent(this.tmpl, elem));
-    elementsArray.forEach((elem) => { this.container.appendChild(elem); });
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Renderer;
-
-
-
-/***/ }),
-/* 10 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-class Actions {
-  bindHandlers(target, handler) {
-    target.forEach((elem) => { elem.addEventListener('click', handler); });
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Actions;
 
 
 

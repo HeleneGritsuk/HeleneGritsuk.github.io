@@ -1,5 +1,3 @@
-import { newsPagination, appendNews } from '../index';
-
 export default class HttpClient {
   constructor(apiUrl, apiKey) {
     this.apiUrl = apiUrl;
